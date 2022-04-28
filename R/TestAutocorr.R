@@ -4,7 +4,7 @@
 #' @param p ordre partie autorégressive à tester
 #' @param q ordre partie moyenne mobile à tester
 #'
-#' @return lag=i et p-value du test de Portemanteau (test d'indépendance des résidus -> white noise ? ; le test vérifie sur un nb de lag donné si les autocorrélations entre résidus sont nuls) avec statistique de Ljung-Box. p-value <0.05 on rejette l'hypothèse nulle au seuil de 95% i.e. rejette l'hypothèse d'indépendance des résidus.
+#' @return lag=i (20 lags de base) et p-value du test de Portemanteau (test d'indépendance des résidus -> white noise ? ; le test vérifie sur un nb de lag donné si les autocorrélations entre résidus sont nuls) avec statistique de Ljung-Box. p-value <0.05 on rejette l'hypothèse nulle au seuil de 95% i.e. rejette l'hypothèse d'indépendance des résidus.
 #' @export
 
 TestAutocorr<-function(var,p,q){
