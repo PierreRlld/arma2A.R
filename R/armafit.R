@@ -4,7 +4,7 @@
 #' @param p ordre partie autorégressive à tester
 #' @param q ordre partie moyenne mobile à tester
 #'
-#' @return TestAutocorr et TestSignificativite
+#' @return Synthese de TestAutocorr et TestSignificativite
 #' @export
 #'
 armafit<-function(serie,p,q){
