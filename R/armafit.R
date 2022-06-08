@@ -3,6 +3,7 @@
 #' @param serie série stationnaire d'entrée
 #' @param p ordre partie autorégressive à tester
 #' @param q ordre partie moyenne mobile à tester
+#' @param lag_max lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max
 #'
 #' @return Synthese de TestAutocorr et TestSignificativite
 #' @export
