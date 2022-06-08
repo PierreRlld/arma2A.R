@@ -7,11 +7,11 @@
 #' @return Synthese de TestAutocorr et TestSignificativite
 #' @export
 #'
-armafit<-function(serie,p,q){
+armafit<-function(serie,p,q,lag_max){
   cat("Try ARMA(",p,",",q,")\n")
   cat("\n")
   cat("1/ Test d'absence absence d'autocorrelation des residus [Ljung-Box] :\n")
-  TestAutocorr(serie,p,q)
+  TestAutocorr(serie,p,q,lag_max)
   cat(" \n")
   cat("2/ Test de nullite des coefficients des des ordres les plus eleves :\n")
   TestSignificatif(serie,p,q)
