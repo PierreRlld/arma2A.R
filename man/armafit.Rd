@@ -16,7 +16,7 @@ armafit(serie, p, q, lagmax)
 \item{lagmax}{lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max}
 }
 \value{
-Synthese de TestAutocorr et TestSignificativite
+Synthese de TestAutocorr et TestSignificativite & Critères AIC BIC
 }
 \description{
 Title

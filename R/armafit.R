@@ -5,7 +5,7 @@
 #' @param q ordre partie moyenne mobile à tester
 #' @param lagmax lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max
 #'
-#' @return Synthese de TestAutocorr et TestSignificativite
+#' @return Synthese de TestAutocorr et TestSignificativite & Critères AIC BIC
 #' @export
 #'
 #' @importFrom stats arima AIC BIC

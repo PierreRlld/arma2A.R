@@ -15,7 +15,16 @@ TestSignificatif <- function(serie,p,q){
   t<-abs(coef/se)
   t2<-t>1.96             #on rejette l'hypothèse nulle du test de Student ?
   sig<-c(t2[p],t2[p+q])  #On regarde si les coefficients des plus grands ordres sont significatifs
-  res<-t2[p]+t2[p+q]
+  if (p==0 & q!=0 ){
+    res<-t2[q]
+    nb_param<-1}
+  else if(q==0 & p!=0){
+    res<-t2[p]
+    nb_param<-1}
+  else {
+    res<-t2[p]+t2[p+q]
+    nb_param<-2} #(p!=0 & q!=0 )
+
 
   #Résultats d'intérêt
   coef_est<-c(coef[p],coef[p+q])
@@ -27,5 +36,5 @@ TestSignificatif <- function(serie,p,q){
   cat(" \n")
   cat("Significativite au seuil de 95% \n")
   print(sig)
-  if (res!=2){cat("=> Modele rejete : au moins l'un des coefficients des ordres les plus eleves n'est pas signififcatif au seuil de 95%\n")} else{cat("=> Modele bien ajuste\n")}
+  if (res!=nb_param){cat("=> Modele rejete : au moins l'un des coefficients des ordres les plus eleves n'est pas signififcatif au seuil de 95%\n")} else{cat("=> Modele bien ajuste\n")}
 }
