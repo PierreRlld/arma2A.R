@@ -2,12 +2,11 @@ Package: arma2A
 Title: ARMA finder package 
 Version: 0.0.0.9000
 Authors@R: 
-    person("Pierre", "Rouillard", , "pierre.rouillard@ensae.fr", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Pierre", "Rouillard", , "pierre.rouillard@ensae.fr", role = c("aut", "cre"))
 Description: Implémentation de plusieurs fonctions permettant de trouver le bon modèle ARMA (validité, significativité).
 Depends: R (>= 4.1.0)
 Imports:
-  timeSeries
+  timeSeries, stats
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

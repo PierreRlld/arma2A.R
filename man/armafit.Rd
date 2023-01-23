@@ -4,7 +4,7 @@
 \alias{armafit}
 \title{Title}
 \usage{
-armafit(serie, p, q)
+armafit(serie, p, q, lagmax)
 }
 \arguments{
 \item{serie}{série stationnaire d'entrée}
@@ -12,9 +12,11 @@ armafit(serie, p, q)
 \item{p}{ordre partie autorégressive à tester}
 
 \item{q}{ordre partie moyenne mobile à tester}
+
+\item{lagmax}{lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max}
 }
 \value{
-TestAutocorr et TestSignificativite
+Synthese de TestAutocorr et TestSignificativite
 }
 \description{
 Title
