@@ -8,6 +8,7 @@
 #' @return Synthese de TestAutocorr et TestSignificativite
 #' @export
 #'
+#'#' @importFrom stats arima
 armafit<-function(serie,p,q,lagmax){
   cat("Try ARMA(",p,",",q,")\n")
   cat("\n")
@@ -16,4 +17,8 @@ armafit<-function(serie,p,q,lagmax){
   cat(" \n")
   cat("2/ Test de nullite des coefficients des des ordres les plus eleves :\n")
   TestSignificatif(serie,p,q)
+  cat(" \n")
+  cat("3/ Criteres d'informations :\n")
+  mod <- arima(serie, order=c(p,0,q), include.mean = FALSE)
+  cat(rbind('AIC: ', AIC(mod),'---', 'BIC: ', BIC(mod)))
 }
