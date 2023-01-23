@@ -1,9 +1,9 @@
 Package: arma2A
 Title: ARMA finder package 
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person("Pierre", "Rouillard", , "pierre.rouillard@ensae.fr", role = c("aut", "cre"))
-Description: Implémentation de plusieurs fonctions permettant de trouver le bon modèle ARMA (validité, significativité).
+Description: Check d'un modèle ARMA défini (validité, significativité).
 Depends: R (>= 4.1.0)
 Imports:
   timeSeries, stats

@@ -8,7 +8,7 @@
 #' @return Synthese de TestAutocorr et TestSignificativite
 #' @export
 #'
-#'#' @importFrom stats arima
+#' @importFrom stats arima AIC BIC
 armafit<-function(serie,p,q,lagmax){
   cat("Try ARMA(",p,",",q,")\n")
   cat("\n")

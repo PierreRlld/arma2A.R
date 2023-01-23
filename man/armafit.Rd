@@ -7,7 +7,7 @@
 armafit(serie, p, q, lagmax)
 }
 \arguments{
-\item{serie}{série stationnaire d'entrée}
+\item{serie}{série Stationnaire d'entrée}
 
 \item{p}{ordre partie autorégressive à tester}
 
