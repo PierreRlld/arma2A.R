@@ -4,7 +4,7 @@
 \alias{TestSignificatif}
 \title{TestSignificatif}
 \usage{
-TestSignificatif(serie, p, q)
+TestSignificatif(serie, p, q, w_mean, w_drift)
 }
 \arguments{
 \item{serie}{série stationnaire (d=0)}
@@ -12,6 +12,10 @@ TestSignificatif(serie, p, q)
 \item{p}{ordre partie autorégressive à tester}
 
 \item{q}{ordre partie moyenne mobile à tester}
+
+\item{w_mean}{include mean}
+
+\item{w_drift}{include drift}
 }
 \value{
 Significativité au seuil de 95\% des coefficients des ordres les plus élevés

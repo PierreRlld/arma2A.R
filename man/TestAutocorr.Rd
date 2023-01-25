@@ -4,7 +4,7 @@
 \alias{TestAutocorr}
 \title{TestAutocorr}
 \usage{
-TestAutocorr(var, p, q, lagmax)
+TestAutocorr(var, p, q, lagmax, w_mean, w_drift)
 }
 \arguments{
 \item{var}{série stationnaire (d=0); type timeSeries}
@@ -14,6 +14,10 @@ TestAutocorr(var, p, q, lagmax)
 \item{q}{ordre partie moyenne mobile à tester}
 
 \item{lagmax}{lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max}
+
+\item{w_mean}{include mean}
+
+\item{w_drift}{include drift}
 }
 \value{
 lag=i et p-value du test de Portemanteau (test d'indépendance des résidus -> white noise ? ; le test vérifie sur un nb de lag donné si les autocorrélations entre résidus sont nuls) avec statistique de Ljung-Box. p-value <0.05 on rejette l'hypothèse nulle au seuil de 95\% i.e. rejette l'hypothèse d'indépendance des résidus.

@@ -4,7 +4,7 @@
 \alias{armafit}
 \title{Title}
 \usage{
-armafit(serie, p, q, lagmax)
+armafit(serie, p, q, lagmax, w_mean, w_drift)
 }
 \arguments{
 \item{serie}{série Stationnaire d'entrée}
@@ -14,6 +14,10 @@ armafit(serie, p, q, lagmax)
 \item{q}{ordre partie moyenne mobile à tester}
 
 \item{lagmax}{lag max à tester pour les autocorrélations des résidus (statistique de Ljung-Box) > hypothèse forte résidus suivent un bruit blanc, test jusqu'à lag_max}
+
+\item{w_mean}{include mean}
+
+\item{w_drift}{include drift}
 }
 \value{
 Synthese de TestAutocorr et TestSignificativite & Critères AIC BIC

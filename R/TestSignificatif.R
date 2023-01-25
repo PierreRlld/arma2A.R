@@ -3,13 +3,15 @@
 #' @param serie série stationnaire (d=0)
 #' @param p ordre partie autorégressive à tester
 #' @param q ordre partie moyenne mobile à tester
+#' @param w_mean include mean
+#' @param w_drift include drift
 #'
 #' @return Significativité au seuil de 95% des coefficients des ordres les plus élevés
 #' @export
 #'
 #' @importFrom stats Box.test arima pnorm residuals
-TestSignificatif <- function(serie,p,q){
-  var<-arima(serie,order=c(p,0,q),include.mean=FALSE)
+TestSignificatif <- function(serie,p,q, w_mean, w_drift){
+  var<-Arima(serie,order=c(p,0,q), include.mean = w_mean, include.drift = w_drift)
   coef<-var$coef
   se<-sqrt(diag(var$var.coef))
   t<-abs(coef/se)
@@ -23,7 +25,7 @@ TestSignificatif <- function(serie,p,q){
     nb_param<-1}
   else {
     res<-t2[p]+t2[p+q]
-    nb_param<-2} #(p!=0 & q!=0 )
+    nb_param<-2} #(p!=0 & q!=0)
 
 
   #Résultats d'intérêt

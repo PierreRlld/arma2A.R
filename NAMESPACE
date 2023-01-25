@@ -3,6 +3,7 @@
 export(TestAutocorr)
 export(TestSignificatif)
 export(armafit)
+importFrom(forecast,Arima)
 importFrom(stats,AIC)
 importFrom(stats,BIC)
 importFrom(stats,Box.test)
